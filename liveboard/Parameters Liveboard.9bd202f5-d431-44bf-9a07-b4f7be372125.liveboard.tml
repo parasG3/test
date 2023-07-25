@@ -82,7 +82,7 @@ liveboard:
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}]}"
       chart:
-        type: COLUMN
+        type: LINE
         chart_columns:
         - column_id: Month(Order Date)
         - column_id: Total Partial Quantity
