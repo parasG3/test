@@ -40,7 +40,7 @@ liveboard:
     viz_guid: db0badd5-47c6-400a-842d-133a7b44d435
   - id: Viz_2
     answer:
-      name: Total Partial Quantity
+      name: 'Total '
       tables:
       - id: Parameters WS
         name: Parameters WS
