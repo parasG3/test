@@ -82,13 +82,23 @@ liveboard:
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}]}"
       chart:
-        type: AREA
+        type: PIVOT_TABLE
         chart_columns:
         - column_id: Month(Order Date)
         - column_id: Total Partial Quantity
         - column_id: Total Discount
         - column_id: Total Tax
         axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Partial Quantity
+          - Total Discount
+          - Total Tax
+        - "y":
+          - Total Partial Quantity
+          - Total Discount
+          - Total Tax
         - x:
           - Month(Order Date)
           "y":
