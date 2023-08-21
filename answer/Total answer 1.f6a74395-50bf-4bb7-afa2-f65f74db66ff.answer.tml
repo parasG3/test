@@ -1,0 +1,46 @@
+guid: f6a74395-50bf-4bb7-afa2-f65f74db66ff
+answer:
+  name: Total answer 1
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Tax] [Size] [Revenue] [Order Date] [Order Date].quarterly"
+  answer_columns:
+  - name: Total Tax
+  - name: Size
+  - name: Total Revenue
+  - name: Quarter(Order Date)
+  table:
+    table_columns:
+    - column_id: Size
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Quarter(Order Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Size
+    - Quarter(Order Date)
+    - Total Tax
+    - Total Revenue
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Size
+    - column_id: Quarter(Order Date)
+    - column_id: Total Tax
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Quarter(Order Date)
+      "y":
+      - Total Tax
+      - Total Revenue
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Size\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8e24f5bb-b0d6-42c2-b99e-33b9ca9ee552\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"5f0a5021-5f8c-4eb7-8cce-7c99b74905b4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": true}},{\"id\": \"bdd902e0-e13f-40e2-a35b-04bf28b336f7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Revenue\",\"color\": \"#48D1E0\"}]}"
+  display_mode: CHART_MODE
