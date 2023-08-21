@@ -1,0 +1,42 @@
+guid: 91f0e25e-673e-459c-a448-3c996ef80c4a
+answer:
+  name: Total-21-aug
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Revenue] [Size] [Order Date] [Order Date].quarterly"
+  answer_columns:
+  - name: Total Revenue
+  - name: Size
+  - name: Quarter(Order Date)
+  table:
+    table_columns:
+    - column_id: Size
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Quarter(Order Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Size
+    - Quarter(Order Date)
+    - Total Revenue
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Size
+    - column_id: Quarter(Order Date)
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Quarter(Order Date)
+      "y":
+      - Total Revenue
+      color:
+      - Size
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Size\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1083a776-bde4-4db1-8db1-06af2c0f391f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"eca7f804-1b57-4c00-9e6b-1012c7895bad\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#2E75F0\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#06BF7F\"},{\"serieName\": \"5\",\"color\": \"#8C62F5\"},{\"serieName\": \"6\",\"color\": \"#FF8142\"},{\"serieName\": \"7\",\"color\": \"#ABC7F9\"},{\"serieName\": \"8\",\"color\": \"#B5ECF2\"},{\"serieName\": \"9\",\"color\": \"#FDE9AF\"},{\"serieName\": \"10\",\"color\": \"#9BE5CB\"},{\"serieName\": \"11\",\"color\": \"#D1C0FB\"},{\"serieName\": \"12\",\"color\": \"#FFCCB3\"},{\"serieName\": \"13\",\"color\": \"#2359B6\"},{\"serieName\": \"14\",\"color\": \"#369FAA\"},{\"serieName\": \"15\",\"color\": \"#BF982A\"},{\"serieName\": \"16\",\"color\": \"#049160\"},{\"serieName\": \"17\",\"color\": \"#6A4ABA\"},{\"serieName\": \"18\",\"color\": \"#C26232\"},{\"serieName\": \"19\",\"color\": \"#71A1F4\"},{\"serieName\": \"20\",\"color\": \"#82DFE9\"},{\"serieName\": \"21\",\"color\": \"#FCD977\"},{\"serieName\": \"22\",\"color\": \"#56D3A8\"},{\"serieName\": \"23\",\"color\": \"#B094F8\"},{\"serieName\": \"24\",\"color\": \"#FFA97E\"},{\"serieName\": \"25\",\"color\": \"#163772\"},{\"serieName\": \"26\",\"color\": \"#22636B\"},{\"serieName\": \"27\",\"color\": \"#785F1A\"},{\"serieName\": \"28\",\"color\": \"#025B3C\"},{\"serieName\": \"29\",\"color\": \"#422E75\"},{\"serieName\": \"30\",\"color\": \"#7A3D1F\"},{\"serieName\": \"31\",\"color\": \"#2E75F0\"},{\"serieName\": \"32\",\"color\": \"#48D1E0\"},{\"serieName\": \"33\",\"color\": \"#FCC838\"},{\"serieName\": \"34\",\"color\": \"#06BF7F\"},{\"serieName\": \"35\",\"color\": \"#8C62F5\"},{\"serieName\": \"36\",\"color\": \"#FF8142\"},{\"serieName\": \"37\",\"color\": \"#ABC7F9\"},{\"serieName\": \"38\",\"color\": \"#B5ECF2\"},{\"serieName\": \"39\",\"color\": \"#FDE9AF\"},{\"serieName\": \"40\",\"color\": \"#9BE5CB\"},{\"serieName\": \"41\",\"color\": \"#D1C0FB\"},{\"serieName\": \"42\",\"color\": \"#FFCCB3\"},{\"serieName\": \"43\",\"color\": \"#2359B6\"},{\"serieName\": \"44\",\"color\": \"#369FAA\"},{\"serieName\": \"45\",\"color\": \"#BF982A\"},{\"serieName\": \"46\",\"color\": \"#049160\"},{\"serieName\": \"47\",\"color\": \"#6A4ABA\"},{\"serieName\": \"48\",\"color\": \"#C26232\"},{\"serieName\": \"49\",\"color\": \"#71A1F4\"},{\"serieName\": \"50\",\"color\": \"#82DFE9\"}]}"
+  display_mode: CHART_MODE
