@@ -179,8 +179,11 @@ liveboard:
         "y": 0
         height: 8
         width: 6
-      - visualization_id: Viz_3
       - visualization_id: Viz_4
+        x: 0
+        "y": 16
+        height: 8
+        width: 6
     - name: Tab 2
       description: ""
       tiles:
@@ -189,3 +192,8 @@ liveboard:
         "y": 0
         height: 8
         width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 8
+        height: 8
+        width: 12
