@@ -46,49 +46,6 @@ liveboard:
     viz_guid: f0cd11a3-f104-44b7-baf6-271c0918c09c
   - id: Viz_2
     answer:
-      name: Total Supply Cost by Monthly Order Date and Size_N3
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Size_N3] [Supply Cost] [Order Date] [Order Date].monthly"
-      answer_columns:
-      - name: Size_N3
-      - name: Total Supply Cost
-      - name: Month(Order Date)
-      table:
-        table_columns:
-        - column_id: Size_N3
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Month(Order Date)
-          headline_aggregation: MIN-MAX
-        - column_id: Total Supply Cost
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Size_N3
-        - Month(Order Date)
-        - Total Supply Cost
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: LINE
-        chart_columns:
-        - column_id: Size_N3
-        - column_id: Month(Order Date)
-        - column_id: Total Supply Cost
-        axis_configs:
-        - x:
-          - Month(Order Date)
-          "y":
-          - Total Supply Cost
-          color:
-          - Size_N3
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Size_N3\",\"columnProperty\": {}},{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d179ce32-8f66-4886-97cb-83ffd434114e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"2d9fd151-7b09-4386-b1b2-52e887ad10c7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#2E75F0\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#06BF7F\"},{\"serieName\": \"5\",\"color\": \"#8C62F5\"},{\"serieName\": \"6\",\"color\": \"#FF8142\"},{\"serieName\": \"7\",\"color\": \"#ABC7F9\"},{\"serieName\": \"8\",\"color\": \"#B5ECF2\"},{\"serieName\": \"9\",\"color\": \"#FDE9AF\"},{\"serieName\": \"10\",\"color\": \"#9BE5CB\"},{\"serieName\": \"11\",\"color\": \"#D1C0FB\"},{\"serieName\": \"12\",\"color\": \"#FFCCB3\"},{\"serieName\": \"13\",\"color\": \"#2359B6\"},{\"serieName\": \"14\",\"color\": \"#369FAA\"},{\"serieName\": \"15\",\"color\": \"#BF982A\"},{\"serieName\": \"16\",\"color\": \"#049160\"},{\"serieName\": \"17\",\"color\": \"#6A4ABA\"},{\"serieName\": \"18\",\"color\": \"#C26232\"},{\"serieName\": \"19\",\"color\": \"#71A1F4\"},{\"serieName\": \"20\",\"color\": \"#82DFE9\"},{\"serieName\": \"21\",\"color\": \"#FCD977\"},{\"serieName\": \"22\",\"color\": \"#56D3A8\"},{\"serieName\": \"23\",\"color\": \"#B094F8\"},{\"serieName\": \"24\",\"color\": \"#FFA97E\"},{\"serieName\": \"25\",\"color\": \"#163772\"},{\"serieName\": \"26\",\"color\": \"#22636B\"},{\"serieName\": \"27\",\"color\": \"#785F1A\"},{\"serieName\": \"28\",\"color\": \"#025B3C\"},{\"serieName\": \"29\",\"color\": \"#422E75\"},{\"serieName\": \"30\",\"color\": \"#7A3D1F\"},{\"serieName\": \"31\",\"color\": \"#2E75F0\"},{\"serieName\": \"32\",\"color\": \"#48D1E0\"},{\"serieName\": \"33\",\"color\": \"#FCC838\"},{\"serieName\": \"34\",\"color\": \"#06BF7F\"},{\"serieName\": \"35\",\"color\": \"#8C62F5\"},{\"serieName\": \"36\",\"color\": \"#FF8142\"},{\"serieName\": \"37\",\"color\": \"#ABC7F9\"},{\"serieName\": \"38\",\"color\": \"#B5ECF2\"},{\"serieName\": \"39\",\"color\": \"#FDE9AF\"},{\"serieName\": \"40\",\"color\": \"#9BE5CB\"},{\"serieName\": \"41\",\"color\": \"#D1C0FB\"},{\"serieName\": \"42\",\"color\": \"#FFCCB3\"},{\"serieName\": \"43\",\"color\": \"#2359B6\"},{\"serieName\": \"44\",\"color\": \"#369FAA\"},{\"serieName\": \"45\",\"color\": \"#BF982A\"},{\"serieName\": \"46\",\"color\": \"#049160\"},{\"serieName\": \"47\",\"color\": \"#6A4ABA\"},{\"serieName\": \"48\",\"color\": \"#C26232\"},{\"serieName\": \"49\",\"color\": \"#71A1F4\"},{\"serieName\": \"50\",\"color\": \"#82DFE9\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 74af044c-f9a5-4c0c-aaeb-bc362cb62004
-  - id: Viz_3
-    answer:
       name: "Part Partkey, Quarterly Order Date"
       tables:
       - id: Parameters WS
@@ -120,10 +77,10 @@ liveboard:
           "y":
           - Part Partkey
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a36d7a2-ae64-4935-be6d-7e23a7607b89\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Part Partkey\"],\"isOpposite\": false}},{\"id\": \"c808c4af-7f4f-4836-b1ff-6fa6c1abd655\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a36d7a2-ae64-4935-be6d-7e23a7607b89\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Part Partkey\"],\"isOpposite\": false}},{\"id\": \"c808c4af-7f4f-4836-b1ff-6fa6c1abd655\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"}],\"tooltipConfig\": {}}"
       display_mode: TABLE_MODE
     viz_guid: 5fa081e2-bbdd-46cf-ba44-065edc4fa452
-  - id: Viz_4
+  - id: Viz_3
     answer:
       name: Total Supply Cost by Quarterly Order Date
       tables:
@@ -166,7 +123,7 @@ liveboard:
           "y":
           - Total Supply Cost
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0e3701a-1bca-438e-bb6f-45f33d51e2ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"2f40b672-d5d1-4869-ac7c-2dd54d0a8391\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#FCC838\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0e3701a-1bca-438e-bb6f-45f33d51e2ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"2f40b672-d5d1-4869-ac7c-2dd54d0a8391\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: db5b90cd-5279-4eaf-a336-1ad05143a928
   layout:
@@ -179,7 +136,7 @@ liveboard:
         "y": 0
         height: 8
         width: 6
-      - visualization_id: Viz_4
+      - visualization_id: Viz_3
         x: 0
         "y": 16
         height: 8
@@ -188,11 +145,6 @@ liveboard:
       description: ""
       tiles:
       - visualization_id: Viz_2
-        x: 0
-        "y": 0
-        height: 8
-        width: 6
-      - visualization_id: Viz_3
         x: 0
         "y": 8
         height: 8
