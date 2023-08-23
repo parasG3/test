@@ -123,6 +123,52 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6a36d7a2-ae64-4935-be6d-7e23a7607b89\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Part Partkey\"],\"isOpposite\": false}},{\"id\": \"c808c4af-7f4f-4836-b1ff-6fa6c1abd655\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"}]}"
       display_mode: TABLE_MODE
     viz_guid: 5fa081e2-bbdd-46cf-ba44-065edc4fa452
+  - id: Viz_4
+    answer:
+      name: Total Supply Cost by Quarterly Order Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Part Partkey] [Order Date] [Order Date].quarterly [Org Name] [Supply Cost]"
+      answer_columns:
+      - name: Part Partkey
+      - name: Quarter(Order Date)
+      - name: Org Name
+      - name: Total Supply Cost
+      table:
+        table_columns:
+        - column_id: Part Partkey
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Quarter(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Org Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Part Partkey
+        - Quarter(Order Date)
+        - Org Name
+        - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Part Partkey
+        - column_id: Quarter(Order Date)
+        - column_id: Org Name
+        - column_id: Total Supply Cost
+        axis_configs:
+        - x:
+          - Quarter(Order Date)
+          "y":
+          - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0e3701a-1bca-438e-bb6f-45f33d51e2ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"2f40b672-d5d1-4869-ac7c-2dd54d0a8391\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: db5b90cd-5279-4eaf-a336-1ad05143a928
   layout:
     tabs:
     - name: Tab 1
@@ -134,6 +180,7 @@ liveboard:
         height: 8
         width: 6
       - visualization_id: Viz_3
+      - visualization_id: Viz_4
     - name: Tab 2
       description: ""
       tiles:
