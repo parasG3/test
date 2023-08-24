@@ -1,0 +1,19 @@
+guid: 5ddd7827-d9ef-462e-b763-530f132f57c7
+connection:
+  name: test-connection-commit-on-save
+  type: RDBMS_SNOWFLAKE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: accountName
+    value: thoughtspot_partner
+  - key: user
+    value: DEV_USER
+  - key: password
+    value: ""
+  - key: role
+    value: DEV
+  - key: warehouse
+    value: SMALL_WH
+  - key: database
+    value: DEVELOPMENT
+  description: used for commit on save workflow testing

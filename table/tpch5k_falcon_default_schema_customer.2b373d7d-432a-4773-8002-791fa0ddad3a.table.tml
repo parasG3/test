@@ -1,0 +1,18 @@
+guid: 2b373d7d-432a-4773-8002-791fa0ddad3a
+table:
+  name: tpch5k_falcon_default_schema_customer
+  db: DEVELOPMENT
+  schema: TS_dataset
+  db_table: tpch5k_falcon_default_schema_customer
+  connection:
+    name: test-connection-commit-on-save
+    fqn: 5ddd7827-d9ef-462e-b763-530f132f57c7
+  columns:
+  - name: c_custkey
+    db_column_name: c_custkey
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
