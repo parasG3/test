@@ -1,3 +1,95 @@
 guid: 7d7a27ee-8e38-4fae-918c-2fc87049135b
 liveboard:
   name: Test Pinboard push Async
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Average Revenue by Part
+      description: "Average Revenue by Part for Region, Year - EUROPE only"
+      tables:
+      - id: DATE
+        name: DATE
+        fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      - id: PART
+        name: PART
+        fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+      - id: SUPPLIER
+        name: SUPPLIER
+        fqn: 95158c5f-7805-48f0-8802-c727d1785a04
+      joins:
+      - id: Lineorder PartKey - Part PartKey
+        name: Lineorder PartKey - Part PartKey
+        source: LINEORDER
+        destination: PART
+      - id: Commit Date - Datekey
+        name: Commit Date - Datekey
+        source: LINEORDER
+        destination: DATE
+      - id: Lineorder Suppkey - Supplier SuppKey
+        name: Lineorder Suppkey - Supplier SuppKey
+        source: LINEORDER
+        destination: SUPPLIER
+      table_paths:
+      - id: DATE_1
+        table: DATE
+        join_path:
+        - join:
+          - Commit Date - Datekey
+      - id: LINEORDER_1
+        table: LINEORDER
+        join_path:
+        - {}
+      - id: PART_1
+        table: PART
+        join_path:
+        - join:
+          - Lineorder PartKey - Part PartKey
+      - id: SUPPLIER_1
+        table: SUPPLIER
+        join_path:
+        - join:
+          - Lineorder Suppkey - Supplier SuppKey
+      search_query: "average [LINEORDER_1::Revenue] by [PART_1::Part PartKey] [DATE_1::Year] [SUPPLIER_1::Supplier Region] [SUPPLIER_1::Supplier Region].europe"
+      answer_columns:
+      - name: Average Revenue
+      - name: Part PartKey
+      - name: Year
+      - name: Supplier Region
+      table:
+        table_columns:
+        - column_id: Part PartKey
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Year
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Supplier Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Average Revenue
+          headline_aggregation: MIN
+        ordered_column_ids:
+        - Part PartKey
+        - Year
+        - Supplier Region
+        - Average Revenue
+        client_state: ""
+        client_state_v2: "{\"wrapTableHeader\": true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Part PartKey
+        - column_id: Year
+        - column_id: Supplier Region
+        - column_id: Average Revenue
+        axis_configs:
+        - x:
+          - Year
+          "y":
+          - Average Revenue
+          color:
+          - Supplier Region
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"115c8146-31e6-46e3-aae6-41a79774c017\":{\"linkedColumns\":[\"Average Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2e441b7f-b625-4cb2-9eb3-ec54f0cc240d\":{\"linkedColumns\":[\"Year\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"europe\":\"#FCC838\"},\"version\":\"V2.1\",\"columnProperties\":{\"Part PartKey\":{},\"Year\":{},\"Supplier Region\":{},\"Average Revenue\":{}}}"
+      display_mode: CHART_MODE
+      client_state: "{\"answerMode\":\"advanced\"}"
+    viz_guid: d08346aa-3468-4010-97f1-52f15ecff095
