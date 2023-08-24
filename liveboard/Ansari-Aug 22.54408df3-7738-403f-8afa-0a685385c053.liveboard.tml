@@ -126,6 +126,47 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0e3701a-1bca-438e-bb6f-45f33d51e2ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"2f40b672-d5d1-4869-ac7c-2dd54d0a8391\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Part Partkey\",\"color\": \"#FF8142\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: db5b90cd-5279-4eaf-a336-1ad05143a928
+  - id: Viz_4
+    answer:
+      name: "Size_N4, Day of week Order Date, Order Date"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Size_N4] [Order Date].'day of week' [Order Date].'hour of day'"
+      answer_columns:
+      - name: Size_N4
+      - name: Day of Week(Order Date)
+      - name: HOUR_OF_DAY(Order Date)
+      table:
+        table_columns:
+        - column_id: Size_N4
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: HOUR_OF_DAY(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Size_N4
+        - Day of Week(Order Date)
+        - HOUR_OF_DAY(Order Date)
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Size_N4
+        - column_id: Day of Week(Order Date)
+        - column_id: HOUR_OF_DAY(Order Date)
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Size_N4
+          category:
+          - HOUR_OF_DAY(Order Date)
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 04f23d2a-d228-49f1-8b4e-7b8da14148c6
   layout:
     tabs:
     - name: Tab 1
@@ -149,3 +190,4 @@ liveboard:
         "y": 8
         height: 8
         width: 12
+      - visualization_id: Viz_4
