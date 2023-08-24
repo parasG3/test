@@ -167,6 +167,59 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 04f23d2a-d228-49f1-8b4e-7b8da14148c6
+  - id: Viz_5
+    answer:
+      name: "Total Supply Cost, Total Extended Price, Total Quantity by Day of week Order Date"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Size_N4] [Order Date].'day of week' [Supply Cost] [Extended Price] [Quantity]"
+      answer_columns:
+      - name: Size_N4
+      - name: Day of Week(Order Date)
+      - name: Total Supply Cost
+      - name: Total Extended Price
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Size_N4
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Size_N4
+        - Day of Week(Order Date)
+        - Total Supply Cost
+        - Total Extended Price
+        - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Size_N4
+        - column_id: Day of Week(Order Date)
+        - column_id: Total Supply Cost
+        - column_id: Total Extended Price
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Supply Cost
+          - Total Extended Price
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Size_N4\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"347cbd29-6770-4c7c-bd7f-00b297cc811c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"cbd8a724-d5df-45e0-b859-92f181d04ede\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"f8eb997b-dbee-4197-82f3-9196659ebb3a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"79937ef8-b704-463a-879f-a53710681e3f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Supply Cost\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5221cac1-32e2-4ddc-83f9-e6488b868024
   layout:
     tabs:
     - name: Tab 1
@@ -191,3 +244,4 @@ liveboard:
         height: 8
         width: 12
       - visualization_id: Viz_4
+      - visualization_id: Viz_5
